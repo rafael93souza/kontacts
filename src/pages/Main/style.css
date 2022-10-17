@@ -1,0 +1,48 @@
+.container {
+    background-color: var(--cor-white-900);
+    color: var(--cor-black-900);
+
+    width: 100vw;
+    max-width: 100%;
+    margin-top: 7rem;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+
+}
+
+.btn-add-contact {
+    all: unset;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.6rem;
+    color: var(--cor-white-900);
+    width: 235px;
+    height: 50px;
+
+    background: var(--cor-green-900);
+    border-radius: 0.8rem;
+    margin-bottom: 3.2rem;
+}
+
+.btn-add-contact:hover {
+    background-color: var(--cor-green-800);
+}
+
+.div-error-success-main {
+    position: absolute;
+    bottom: 2rem;
+    z-index: 2;
+}
+
+@media(max-width:950px) {
+    .btn-add-contact {
+        min-width: 100%;
+    }
+
+    .btn-add-contact:hover {
+        background-color: var(--cor-green-900);
+    }
+}

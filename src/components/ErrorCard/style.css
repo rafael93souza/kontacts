@@ -1,0 +1,49 @@
+.div-error-sign-up {
+    animation-name: slideX;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+
+    transform: translateX(-160%);
+
+}
+
+.div-error-sign-in {
+    animation-name: slideY;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    transform: translate(-130%, -110%);
+
+}
+
+.div-error-main {
+    animation-name: slideY;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    transform: translate(-130%, -110%);
+
+}
+
+@keyframes slideY {
+    from {}
+
+    to {
+        transform: translate(0%, -110%);
+    }
+}
+
+@keyframes slideX {
+    from {}
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@media(max-width:950px) {
+
+    .div-error-sign-in,
+    .div-error-sign-up,
+    .div-error-main {
+        max-width: 90vw;
+    }
+}

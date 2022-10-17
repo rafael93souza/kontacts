@@ -1,0 +1,34 @@
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: var(--cor-black-500);
+}
+
+.form-contact {
+    position: relative;
+    max-width: 476px;
+    height: 563px;
+    border-radius: 0.8rem;
+    background-color: var(--cor-white-900);
+    padding: 5rem;
+}
+
+.form-contact h1 {
+    text-align: center;
+}
+
+.btn-close-modal {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    cursor: pointer;
+}

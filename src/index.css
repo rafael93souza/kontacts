@@ -1,0 +1,60 @@
+:root {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+
+    --cor-white-900: rgba(255, 255, 255, 1);
+
+    --cor-black-900: rgba(0, 0, 0, 1);
+    --cor-black-500: rgba(16, 15, 15, 0.56);
+
+    --cor-green-900: rgba(4, 196, 92, 1);
+    --cor-green-800: rgba(4, 196, 92, 0.8);
+
+    --cor-red-900: rgba(251, 6, 21, 0.65);
+
+    --cor-blue-900: rgba(19, 69, 99, 1);
+}
+
+a {
+    font-weight: 500;
+    color: #1972A8;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #0b3e5e;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.div-success {
+    animation-name: slide;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+
+    transform: translateX(-160%);
+}
+
+@keyframes slide {
+    from {}
+
+    to {
+        transform: translateX(0%);
+    }
+}
