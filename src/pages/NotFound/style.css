@@ -1,0 +1,17 @@
+.container-notfound {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: var(--cor-blue-900)
+}
+
+.btn-notfound {
+    position: absolute;
+    font-size: 1.2rem;
+    bottom: 3rem;
+    margin: auto;
+    background-color: aliceblue;
+    padding: 1.5rem 4rem;
+    border-radius: 1rem;
+}

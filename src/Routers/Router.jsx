@@ -3,6 +3,7 @@ import useApp from "../hooks/useApp";
 import Main from "../pages/Main";
 import SignIn from "../pages/SignIn";
 import SignUp from "../pages/SignUp";
+import NotFound from "../pages/NotFound";
 import { getItem } from "../utils/storage";
 
 function ProtectedRouter({ redirect }) {
@@ -29,6 +30,7 @@ function RouterMain() {
                 <Route path="/main" element={<Main />} />
             </Route>
 
+            <Route path="/*" element={<NotFound />} />
 
         </Routes>
     )
