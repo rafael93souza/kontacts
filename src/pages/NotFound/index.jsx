@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function NotFound() {
     return (
         <div className='container-notfound'>
-            <img src={imageNotFound} />
+            <img className='notfound-img' src={imageNotFound} />
             <Link className='btn-notfound' to='/main'> Voltar a página inicial</Link>
         </div>
     )
