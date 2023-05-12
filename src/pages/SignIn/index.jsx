@@ -23,22 +23,20 @@ function SignIn() {
 
     async function handleSubmit(e) {
         e.preventDefault();
-        console.log(formUser)
-
         if (!formUser.email.trim() || !formUser.password.trim()) {
             return setError("Preencha todos os campos");
         }
-        console.log("passou")
         try {
-
             const response = await postLogin({ email: formUser.email, senha: formUser.password });
-            console.log(response);
             setItem("token", response.data.token);
             setUserLS(response.data.usuario);
             navigate("/main");
         } catch (error) {
-           setError(error?.response?.data)
-            console.log(error)
+            if(error?.response?.data?.mensagem){
+                setError(error?.response?.data?.mensagem)
+            }else{
+                setError("Algo errado aconteceu")
+            }
         }
     }
 

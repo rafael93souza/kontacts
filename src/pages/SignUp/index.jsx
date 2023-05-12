@@ -27,7 +27,7 @@ function SignUp() {
         }
 
         try {
-            const user = await postRegister({ nome: formUser.name, email: formUser.email, senha: formUser.password });
+            await postRegister({ nome: formUser.name, email: formUser.email, senha: formUser.password });
             handleClearForm()
             setSuccess("Cadastro realizado com sucesso");
             setTimeout(() => {
@@ -35,8 +35,12 @@ function SignUp() {
             }, 2300)
 
         } catch (error) {
-            console.log(error)
-            return setError(error.response.data)
+            if(error?.response?.data?.mensagem){
+                setError(error?.response?.data?.mensagem)
+            }else{
+                setError("Algo errado aconteceu")
+            }
+
         }
 
     }

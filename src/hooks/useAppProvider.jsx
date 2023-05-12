@@ -24,7 +24,7 @@ function useAppProvider() {
     async function handleDeleteContact(e, id) {
         e.preventDefault();
         try {
-            const deleteContact = await deleteContacts(id);
+            await deleteContacts(id);
             const localContact = [...contacts];
             const IndexContac = localContact.findIndex(Element => Element.id === id);
             localContact.splice(IndexContac, 1)
@@ -33,12 +33,10 @@ function useAppProvider() {
             setModal(false);
         } catch (error) {
             setError("Erro ao concluir sua solicitação, tente novamente!");
-            console.log(error)
         }
     }
     function handleChange(e) {
         if (e.target.name === 'telephone') {
-
             setFormContact({ ...formContact, [e.target.name]: treatTelephoneInput(e) });
         } else {
             setFormContact({ ...formContact, [e.target.name]: e.target.value });
@@ -57,7 +55,7 @@ function useAppProvider() {
             const response = await getContactsRequest();
             setContacts(response.data)
         } catch (error) {
-            console.log(error)
+            setError("Algo errado aconteceu!")
         }
     }
 
