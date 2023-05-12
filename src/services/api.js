@@ -1,8 +1,8 @@
 import axios from "axios";
 
 export default axios.create({
-    baseURL: "https://contacts-api-cubos.herokuapp.com",
-    /*     baseURL: " http://localhost:3334", */
+    baseURL: "https://back-end-dindin.onrender.com",
+    //baseURL: "http://localhost:3001", 
     timeout: 10000,
     headers: { 'Content-Type': 'application/json' }
 

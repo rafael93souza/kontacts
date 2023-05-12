@@ -8,6 +8,7 @@ import { postLogin } from '../../utils/requests';
 import { setItem } from '../../utils/storage';
 import './style.css';
 
+
 function SignIn() {
     const { formUser, setFormUser,
         error, setError,
@@ -29,13 +30,14 @@ function SignIn() {
         }
         console.log("passou")
         try {
+
             const response = await postLogin({ email: formUser.email, senha: formUser.password });
             console.log(response);
             setItem("token", response.data.token);
             setUserLS(response.data.usuario);
             navigate("/main");
         } catch (error) {
-            setError(error.response.data)
+           setError(error?.response?.data)
             console.log(error)
         }
     }
